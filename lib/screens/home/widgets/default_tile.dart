@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:track_mind/screens/add_note/screen_add.dart';
-
 import '../../../constants/cons.dart';
 
 class DefaultTile extends StatelessWidget {
@@ -13,33 +11,21 @@ class DefaultTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Center(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Spacer(),
-          Image.asset('assets/notes_empty.png',width: 150,),
-          const Text('No Notes'),
-          const Spacer(),
-          Center(
-            child: SizedBox(
-              width: size.width * 0.6,
-              height: 50,
-              child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) {
-                        return const ScreenAdd();
-                      },
-                    ));
-                  },
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [Icon(Icons.add), Text('Add note')],
-                  )),
-            ),
+          Text(
+            'Keep your mind clear',
+            style: kTitleStyle.copyWith(fontSize: 20, color: kTextMutedColor),
           ),
-          space15
+          const SizedBox(height: 10),
+          Text(
+            'Start capturing your ideas',
+            style: kMutedStyle,
+          ),
         ],
-      );
+      ),
+    );
   }
 }

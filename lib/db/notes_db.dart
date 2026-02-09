@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'package:track_mind/model/note.dart';
